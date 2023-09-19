@@ -8,7 +8,7 @@ const Login = (props) => {
 
   const handleSubmit = async(e)=>{
     e.preventDefault();
-    const response = await fetch("http://13.48.203.3:5000/api/auth/login", {
+    const response = await fetch("http://localhost:5000/api/auth/login", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,10 @@ const Login = (props) => {
           <Link to = '/signup'>Don't have an account?</Link>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
+        
+        
       </form>
+      {/* <Link to='http://localhost:5000/api/auth/google' ><button className='btn btn-primary'>Google</button></Link> */}
     </>
   )
 }

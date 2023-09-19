@@ -3,12 +3,13 @@ import {useNavigate} from 'react-router-dom'
 
 const Signup = (props) => {
   const [credentials, setCredentials] = useState({name:"",email:"",password:"",cpassword:""})
+  const [msg,Setmsg] = useState("");
   let navigate = useNavigate()
 
   const handleSubmit = async(e)=>{
     e.preventDefault();
     const {name,email,password} = credentials
-    const response = await fetch("http://13.48.203.3:5000/api/auth/createuser", {
+    const response = await fetch("http://localhost:5000/api/auth/createuser", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -55,6 +56,7 @@ const Signup = (props) => {
           <input type="checkbox" className = "form-check-input" id="exampleCheck1"/>
           <label className = "form-check-label" htmlFor = "exampleCheck1">Check me out</label>
         </div>
+        {msg && <div className="success_msg">{msg}</div>}
         <button type="submit" className = "btn btn-primary">Submit</button>
       </form>
     </>

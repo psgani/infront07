@@ -11,6 +11,7 @@ import {
 import Alert from './components/Alert';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import EmailVerify from './components/EmailVerify';
 import { useState } from 'react';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path = '/about' element = {<About/>}/>
             <Route path = '/login' element = {<Login showAlert = {showAlert}/>}/>
             <Route path = '/signup' element = {<Signup showAlert = {showAlert}/>}/>
+            <Route path = '/users/:id/verifhy/:token' element={<EmailVerify/>}/>
           </Routes>
         </div>
       </NoteState>
