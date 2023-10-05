@@ -8,7 +8,7 @@ const Login = (props) => {
 
   const handleSubmit = async(e)=>{
     e.preventDefault();
-    const response = await fetch("http://3.15.176.194:5000/api/auth/login", {
+    const response = await fetch("http://18.220.15.207:5000/api/auth/login", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Login = (props) => {
         
         
       </form>
-      {/* <Link to='http://3.15.176.194:5000/api/auth/google' ><button className='btn btn-primary'>Google</button></Link> */}
+      {/* <Link to='http://18.220.15.207:5000/api/auth/google' ><button className='btn btn-primary'>Google</button></Link> */}
     </>
   )
 }

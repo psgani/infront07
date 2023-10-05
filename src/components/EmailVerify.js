@@ -8,7 +8,7 @@ const EmailVerify = ()=>{
     useEffect(()=>{
         const verifyEmailUrl = async()=>{
             try{
-                const url=`http://3.15.176.194:5000/api/users/${param.id}/verify/${param.token}`;
+                const url=`http://18.220.15.207:5000/api/users/${param.id}/verify/${param.token}`;
                 const {data} = await axios.get(url);
                 console.log(data);
                 setValidUrl(true)
